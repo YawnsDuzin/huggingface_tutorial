@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+hf_env/
+huggingface_env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Hugging Face cache
+.cache/
+cached_models/
+transformers_cache/
+
+# Model checkpoints and outputs
+results/
+output/
+checkpoints/
+logs/
+runs/
+wandb/
+tensorboard/
+
+# Trained models (크기가 큰 경우 제외)
+*.bin
+*.pt
+*.pth
+*.ckpt
+my_model/
+my_sentiment_model/
+sentiment_model/
+sentiment_model_final/
+
+# Data files (필요에 따라 조정)
+data/
+*.csv
+*.json
+# *.txt  # requirements.txt 등 중요 파일 제외를 위해 주석 처리
+*.pkl
+*.pickle
+
+# 특정 txt 파일만 제외
+data/*.txt
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
