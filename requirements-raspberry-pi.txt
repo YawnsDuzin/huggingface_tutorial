@@ -1,0 +1,51 @@
+# 라즈베리파이용 Hugging Face Vision 튜토리얼 필수 라이브러리
+# 이 파일은 라즈베리파이에서 Vision 모델을 실행하기 위한 최소 요구사항입니다.
+
+# 핵심 라이브러리
+transformers>=4.35.0
+tokenizers>=0.15.0
+
+# 딥러닝 프레임워크 (CPU 버전)
+# 라즈베리파이용 PyTorch는 별도 설치 필요
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 이미지 처리
+Pillow>=10.0.0
+opencv-python-headless>=4.8.0  # GUI 없는 버전 (라즈베리파이 최적화)
+numpy>=1.24.0
+
+# Vision 모델 추가 지원
+timm>=0.9.0  # PyTorch Image Models
+
+# 성능 최적화 (선택사항이지만 강력 권장)
+onnxruntime>=1.16.0  # ONNX 추론으로 2-3배 속도 향상
+optimum[onnxruntime]>=1.13.0  # Hugging Face 최적화 도구
+
+# 유틸리티
+tqdm>=4.65.0
+huggingface-hub>=0.19.0
+
+# 시스템 모니터링
+psutil>=5.9.0
+
+# 웹 스트리밍 (선택)
+Flask>=3.0.0
+
+# GStreamer Python 바인딩
+# 주의: 이것은 pip로 설치하기 어려울 수 있습니다.
+# 대신 시스템 패키지 매니저를 사용하세요:
+#   sudo apt install python3-gi python3-gst-1.0 gir1.2-gstreamer-1.0
+# PyGObject>=3.42.0  # 주석 처리됨 - 시스템 패키지로 설치
+
+# 설치 순서:
+# 1. 시스템 패키지 먼저 설치:
+#    sudo apt update
+#    sudo apt install -y python3-gi python3-gst-1.0 gstreamer1.0-tools
+#
+# 2. 그 다음 pip 패키지 설치:
+#    pip install -r requirements-raspberry-pi.txt
+#
+# 3. PyTorch 별도 설치 (CPU 버전):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu

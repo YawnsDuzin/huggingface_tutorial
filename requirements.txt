@@ -45,3 +45,19 @@ ipywidgets>=8.1.0
 # 추가 도구
 requests>=2.31.0
 beautifulsoup4>=4.12.0
+
+# Vision 및 이미지 처리
+Pillow>=10.0.0
+opencv-python>=4.8.0  # 일반 시스템용
+# opencv-python-headless>=4.8.0  # 서버/라즈베리파이용 (GUI 없음)
+timm>=0.9.0  # PyTorch Image Models
+
+# 라즈베리파이 Vision 지원 (선택)
+# 라즈베리파이에서만 필요:
+# PyGObject>=3.42.0  # GStreamer Python 바인딩 (시스템 패키지로 설치 권장)
+# onnxruntime>=1.16.0  # ONNX 추론 엔진 (성능 향상)
+# optimum>=1.13.0  # Hugging Face 최적화 도구
+
+# 웹 스트리밍 (선택)
+Flask>=3.0.0
+psutil>=5.9.0  # 시스템 모니터링

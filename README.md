@@ -131,12 +131,14 @@ accelerator = Accelerator()
 2. **텍스트 분류** - 감성 분석 실습
 3. **텍스트 생성** - GPT 모델을 활용한 텍스트 생성
 4. **파인튜닝** - 커스텀 데이터로 모델 학습
-5. **고급 활용** - 모델 최적화 및 배포
+5. **한국어 모델** - 한국어 특화 모델 활용
+6. **🆕 라즈베리파이 Vision** - 라즈베리파이에서 Vision 모델 + GStreamer 실시간 처리
 
 각 튜토리얼은 `tutorials/` 디렉토리에 있으며, 실행 가능한 예제 코드를 포함합니다.
 
 ## 🚀 빠른 시작
 
+### 텍스트 처리
 ```bash
 # 라이브러리 설치
 pip install transformers datasets torch
@@ -144,6 +146,24 @@ pip install transformers datasets torch
 # 첫 번째 예제 실행
 python examples/01_text_classification.py
 ```
+
+### 라즈베리파이 Vision (새로 추가!)
+```bash
+# 라즈베리파이에서 Vision 모델 실행
+# 이미지 분류
+python examples/04_vision_gstreamer_raspberry_pi.py --task classification
+
+# 객체 탐지
+python examples/04_vision_gstreamer_raspberry_pi.py --task detection
+
+# 세그멘테이션
+python examples/04_vision_gstreamer_raspberry_pi.py --task segmentation
+
+# Zero-shot 분류
+python examples/04_vision_gstreamer_raspberry_pi.py --task zero-shot --labels "person,dog,cat,car"
+```
+
+자세한 내용은 [라즈베리파이 Vision 튜토리얼](tutorials/06_vision_raspberry_pi.md)을 참조하세요.
 
 ## 📚 참고 자료
 
